@@ -4,32 +4,116 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blackjack</title>
-  <script src="scripts/main.js"></script>
+  <link  rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script  src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script  src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  <link  rel="stylesheet" href="styles/index.css">
+  <style>
+    .card{
+      width: 15%;
+    }
+    #pHand{
+      height: 15vw;
+    }
+    #dHand{
+      height: 15vw;
+    }
+    #dealer-score{
+      height:3vw;
+    }
+    #player-score{
+      height:3vw;
+    }
+    #message{
+      height:3vw;
+    }
+  </style>
 </head>
 <body>
-  <div class="message-box" id="messages"></div>
-  <div class="table">
-    <div class="player">
-      <label class="player-name">Dealer: 
-        <span id="dealer-points" class="points"></span>
-      </label>
-      <div id="dealer-hand" class="hand">
-        <!-- Dealer Hand -->
+
+  <div class="container-fluid ">
+
+    <!---------------------- TITLE -->
+
+    <header class="container mt-3 ">
+      <div class="row">
+        <div class="col-10 offset-1  d-flex justify-content-center">
+          <div class="h1 text-warning">Blackjack</div>
+        </div>
       </div>
-    </div>
-    <div class="player">
-      <label class="player-name">Player: 
-        <span id="player-points" class="points"></span>
-      </label>
-      <div id="player-hand" class="hand">
-        <!-- Player Hand -->
+    </header>
+    
+
+
+    <main class="container border">
+
+      <!------------ MESSAGE -->
+
+      <div class="row">
+        <div class="col d-flex justify-content-center">
+          <div class=" h1 text-success">
+            <p id="message"></p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="buttons">
-      <button id="deal-button" type="button">Deal</button>
-      <button id="hit-button" type="button">Hit</button>
-      <button id="stand-button" type="button">Stand</button>
-    </div>
+    <!----------- DEALER INFO -->
+      <div class="row  ">
+        <div class="col">
+          <div class="h3 text-white d-flex">
+            <p>Dealer:</p>
+            <p id="dealer-score" class="text-danger"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row  ">
+        <div id="dHand" class="col d-flex">
+          <!-- Dealer Hand -->
+          
+        </div>
+      </div>
+
+    <!----------- PLAYER INFO -->
+    
+      <div class="row ">
+        <div class="col-6">
+          <div class="h3 text-white d-flex">
+            <p>Player:</p>
+            <p id="player-score" class="text-success"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row ">
+        <div id="pHand" class="col d-flex ">
+          <!-- Player Hand -->
+          
+        </div>
+      </div>
+
+    <!-------------- BUTTONS -->
+
+      <div class="container">
+        <div class="row mb-3 mt-3">
+          <div class="col  d-flex justify-content-center">
+            <button id="deal-button" class="bg-primary w-50 rounded " type="button">Deal</button>
+          </div>
+          <div class="col d-flex justify-content-center">
+            <button id="hit-button" class="bg-success w-50 rounded" type="button">Hit</button>
+          </div>
+          <div class="col d-flex justify-content-center">
+            <button id="stand-button" class="bg-danger w-50 rounded" type="button">Stand</button>
+          </div>
+        </div>
+      </div>
+
+
+    </main>
+
+
   </div>
+  
+  <script src="scripts/main.js"></script>
+  
 </body>
 </html>
